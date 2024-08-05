@@ -1,6 +1,7 @@
 import { TITLE_FONT } from '@/config';
-import { Button } from './ui/button';
+import { ClientSideButton } from './ui/ClientSideButton';
 import { LinkComponent } from './ui/LinkComponent';
+import { redirect } from 'next/navigation';
 
 export const TopBar = () => {
   return (
@@ -26,13 +27,13 @@ export const TopBar = () => {
               text="Registrarse / Ingresar"
             />
             <div>
-              <Button
-                variant="outline"
-                size="lg"
+              <ClientSideButton
+                label="Sé un experto"
                 className="text-emerald-700 border-emerald-700 font-semibold hover:bg-inherit hover:text-[#055240] hover:border-[#055240]"
-              >
-                Sé un experto
-              </Button>
+                // onClick={() => redirect('/become-a-tasker')}
+                size="lg"
+                variant="outline"
+              />
             </div>
           </div>
         </div>
